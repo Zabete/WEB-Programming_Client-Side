@@ -1,0 +1,89 @@
+html{
+    background-color: #ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ /* vh significa que o site é responsível ao ecrã onde aparecer PC ou tlm por ex */
+    min-height: 100vh;
+    margin: 0;
+}
+
+form{
+    background-color: #ecf0f1;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px black;
+    padding: 10px;
+}
+
+fieldset{
+    border: none;
+    margin: 0;
+    /* padding: 0; */
+}
+
+label, input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input{
+    padding: 0.75em;
+    border-radius: 5px;
+    margin-bottom: 1.75em;
+    border: 1px solid #bbb;
+    font-size: 1em;
+}
+
+legend{
+    padding: 1em;
+    margin: 0;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+label{
+    margin-bottom: 0.25em;
+}
+
+.actions{
+    display: flex; /* Para colocar os botões Entrar/Limpar lado a lado */
+    gap: 15px;     /* Colocar espaço entre os botões Entrar/Limpar */
+}
+
+.botao{
+    background-color: #d1b591;
+    color: white;
+    cursor: pointer;  /* Colocar "mão" no cursor quando lá apontado*/
+}
+
+.bt_limpar{
+    background-color: #e9aa58;
+}
+
+.botao:hover{
+    background-color: #bd8790;
+}
+
+.bt_limpar:hover{
+    background-color: #2e2007;
+}
+
+.botao:active{
+    background-color: #ccc;
+    color:aquamarine
+}
+
+.bt_limpar:active{
+    background-color: #ccc;
+    color: #2e2007;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <h1>Dados de acesso</h1>
+    <form action="#" method="get">
+
+        <fieldset>
+            <legend>Login</legend>
+
+            <label for="user">Utilizador</label>
+            <input type="text" id="user" required autofocus>
+<!-- required obriga a que seja introduzidos dados no campo. O autofocus
+coloca o ponteiro a piscar dentro do campo e só se coloca autofocus obrigatoriamente num campo-->
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" required >
+<!-- ao colocar password no type a password não aperece ao escrevê-la -->
+
+            <div class="actions">
+            <input type="submit" name="bt_enviar" value="Entrar" id="" class="botao">
+            <input type="reset" name="bt_limpar" value="Limpar" id="" class="botao bt_limpar">
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos de formulário</title>
+
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <h1>Objetos de formulário</h1>
+
+<!-- Para não aparecer histórico na escrita coloca-se autocomplete off -->
+    <form action="#" autocomplete="off">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <br>
+            <label for=""><b>Nome</b></label>
+            <input type="text" maxlength="20" placeholder="Nome e sobrenome">
+         <!-- maxlenght é o nº caratere máximo a ser introduzidos -->
+            <br>
+            <br>
+            <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Digite um email válido" id="email">
+            <br>
+            <br>
+            <label for="agregado"><b>Agregado familiar</b></label>
+            <input type="number" min="0" max="10" id="agregado" value="1">
+            <br>
+            <br>
+            <label for="data"><b>Data nascimento</b></label>
+            <input type="date" min="1970-05-08" max="2023-05-08" id="data">
+            <br>
+            <br>
+            <b>Possui algum rendimento extra?</b>
+            <label>
+                <input type="radio" name="atividade" value="s" id="">Sim
+            </label>
+            <label>
+                <input type="radio" name="atividade" value="n" id="">Não
+            </label> 
+<!-- Coloca-se label para cada uma das opções para que o cursor funcione na palavra e não somente na bolinha -->
+<!-- O value é para ligar à base de dados o valor obtido -->
+<!-- Os dois foram ligados pelo name permitindo selecionar somente um ou outro. O radio é utilizado para escolher um ou outro -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Áreas de interesse</legend>
+            <br>
+            <b>Escolha uma ou mais linguagens:</b>
+            <label>
+        <input type="checkbox"name="interesse" value="html"><i>HTML</i>
+            </label>
+            <label>
+        <input type="checkbox"name="interesse" value="css"><i>CSS</i>
+            </label>
+            <label>
+        <input type="checkbox"name="interesse"value="javascript"><i>JavaScript</i>
+            </label>
+            <br>
+            <br>
+            <label><b>Escolha uma linguagem:</b>
+            <br>
+            <br>
+                <select name="linguagem" id="" size="8" multiple>
+         <!-- Lista com 8 linhas e escolha múltipla -->
+                    <optgroup label="Frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <option value="java">JAVA</option>
+                        <option value="pyton">Pyton</option>
+                    </optgroup>
+                </select>
+            <br>
+            <br>
+         <!-- Lista onde só podemos escolher uma opção -->
+            <b>Escolha uma linguagem da lista:</b>   
+                <input type="text" list="lista">  
+                    <datalist id="lista">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="JavaScript">
+                        <option value="Java">
+                        <option value="Pyton">
+                    </datalist>
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+            <br>
+<!-- Caixa de texto com nº de colunas e linhas que quermos e nº máx de carateres -->
+            <textarea name="msg" id="" cols="30" rows="10" maxlength="300" placeholder="Escreva aqui a sua opinião"></textarea>
+            
+            <br>
+            <br>
+            <br>
+
+    <!-- Ao colocar readonly não conseguimos escrever dentro da caixa -->
+            <textarea cols="70" rows="17" readonly>
+Contrato de utilização:
+
+Regra 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos natus molestiae numquam, quo ipsum vitae dolorum quis? Esse eius suscipit ad aperiam accusamus ex quidem quaerat. Molestias quasi adipisci quae provident iste tenetur neque, deserunt porro fugiat repudiandae asperiores eius inventore cum ratione corrupti aut quis velit similique minus pariatur.
+
+Regra 2 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil placeat saepe accusantium sit deleniti, iste inventore perspiciatis molestiae laborum, a ad aperiam fugit, odio temporibus aspernatur vero enim. Voluptatem, rem necessitatibus! Eligendi, adipisci, unde quam consequuntur suscipit dolor excepturi officiis veritatis deleniti exercitationem iste sapiente optio doloribus expedita dolorem aliquid.
+            </textarea>
+            <label>
+                <input type="checkbox">   <u>Li e aceito o contrato</u>
+            </label>
+            <br>
+            <br>
+                <input type="file">   <!-- Botão para colocar um ficheiro -->
+                <input type="hidden" value="texto escondido"> 
+                <!-- Para esconder texto -->
+        </fieldset>
+
+        <br>
+        <input class="botao" type="submit">
+        <input class="botao" type="reset">
+<!-- Os botões do tipo submit e reset fazem parte do formulário, enviam ou limpam o formulário -->
+
+        <input class="botao" type="button" value="OK"> 
+    <!-- Este botão já não faz parte do formulário -->
+
+     <!-- Desta forma conseguimos formatar o botão -->
+        <button class="botao" type="submit"><b>Enviar</b></button>
+        <button class="botao" type="button"><b>OK</b></button>
+        <br>
+        <br>
+        <br>
+        <input class="botao" type="search">     <b><u>Procurar</u></b>
+        <!-- Caixa de procura -->
+        <br>
+        <br>
+        <br>
+    </form>
+    <br>
+    <div class="objetos">
+    <h1>Mais objetos</h1>
+
+ <!-- Aparece verde no intervalo escolhido, neste caso 30-70 -->
+ <!-- Colocando optimum a escala considera esse valor e o 100 como perfeito -->
+    <meter min="0" max="100" low="30" high="70" value="65" optimum="100">
+    </meter>
+
+    <br>
+    <br>
+    <label>% de objetivo
+        <progress max="100" value="80">80%</progress>
+    </label>
+
+    <br>
+    <br>
+
+    <form oninput="resultado.value=a.value*b.value" class="conta">  
+    <!-- Ao colocar oninput faz a conta -->
+        <input type="number" name="a" id="a"> *
+        <input type="number" name="b" id="b"> =
+
+        <output name="resultado" for="a b"></output>
+    </form>
+    </div>
+
+    <div class="ferramentas">
+        <input type="range" min="0" max="10" step="1">
+        <br>
+        <br>
+        <input type="time"> <!-- Relógio para escolher/escrever hora -->
+        <br>
+        <br>
+        <input type="color">
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

@@ -1,0 +1,106 @@
+html{
+    background-color: #dad5d5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1{
+    background-color: #b7c2c2;
+    box-shadow: 5px 5px 10px black;
+    padding: 10px;
+}
+
+form{
+    background-color: #ecf0f1;
+    width: auto;
+    box-shadow: 3px 3px 10px black;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+fieldset{
+    background-color: #dfe2e2;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+legend{
+    background-color: #97878e;
+    padding: 3PX;
+    margin: 5;
+    border-radius: 5px 5px 0px 0px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+label, input{
+    display: inline-block;
+    width: auto;
+    padding: 3px;
+    font-size: 15px;
+}
+
+input{
+    border-radius: 5px;
+    margin-bottom: none;
+    border: 1px solid #bbb;
+    padding: 5px;
+}
+
+.conta{
+    background-color: #b36989;
+}
+
+.objetos{
+    background-color: #f4cce6;
+    padding: 20px;
+    text-align: center;
+    width: auto;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px black;
+    margin: 20px;
+}
+
+.objetos h1{
+    background-color: #c92e71;
+}
+
+.ferramentas{
+    background-color: #f4cce6;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid #ea83ce;
+    margin: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botao{
+    background-color: #d7d4b9;
+    cursor: pointer;
+    padding: 8px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.botao:hover{
+    background-color: #5d593c;
+}
+
+textarea{
+    background-color: #e3d2a8;
+    box-shadow: 3px 3px 10px #c69011;
+    border-radius: 10px;
+    font-size: 15px;
+}
