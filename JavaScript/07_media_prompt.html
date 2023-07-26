@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Média de dois números</title>
+</head>
+
+<body>
+    <h1>Média de dois números vindos de um prompt</h1>
+
+    <button onclick="nome()">Indique o seu nome:</button>
+    <button onclick="media()">Média de dois números</button>
+
+    <p id="name"></p>
+    <p id="media1"></p>
+
+    <script>
+
+        function nome(){
+            var name1 = String(window.prompt('Qual o seu nome?'));
+            var name = document.querySelector('p#name');
+            name.innerHTML = (`O seu nome é ${name1}.`);
+        }
+
+        function media(){
+            var n1 = Number(window.prompt('Digite o primeiro número:'));
+            var n2 = Number(window.prompt('Digite o segundo número:'));
+
+            resultadoMedia = (n1+n2)/2;
+
+            var media1 = document.getElementById('media1');  //Colocando getElementById não é preciso colocar o p# como no anterior
+
+            media1.innerHTML += (`<p> As notas foram: ${n1} e ${n2}. </p>`);
+            media1.innerHTML += (`<p> A média é: ${resultadoMedia} </p>`);
+        }
+
+    </script>
+
+
+
+</body>
+</html>

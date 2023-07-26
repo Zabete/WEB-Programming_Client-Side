@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+        
+        h1{
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        h2{
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+
+        function tabuada() {
+            // saida.innerHTML = document.querySelector('section#saida');  Quando colocamos querySelector obrigatoriamente temos de colocar de onde vem, neste caso section#
+            // ou então usamos getElementById, o resultado é o mesmo
+
+            var saida = document.getElementById('saida');
+            var n = Number(document.getElementById('fnumero').value);
+            var result;
+            
+            saida.innerHTML = `<h2> A tabuada de <b>${n}</b> é </h2>`;
+
+            for (x=1; x<=10; x++) {
+                result = n*x
+                saida.innerHTML += `<p>${n} * ${x} = ${result}</p>`;
+            }      
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1>SUPER TABUADA</h1>
+    <h2><u>Escreva um número e de seguida eu escrevo a tabuada</u></h2>
+
+    <br>
+    <br>
+
+    <section id="entrada">
+        <form action="#" method="get">
+            <label for="fnumero">Introduza um número:</label>
+            <input type="number" value="1" min=1 max=10 name="numero" id="fnumero" onclick=tabuada() onkeydown="tabuada()">
+            <input type="submit" value="Tabuada" formaction="javascript:tabuada()">
+        </form>
+    </section>
+
+    <br>
+
+    <section id="saida">
+        <p>Os dados vão aparecer aqui</p>
+    </section>
+
+</body>
+</html>

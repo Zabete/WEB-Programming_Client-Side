@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de cliques</title>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+
+    <button onclick="contar()">Clica aqui várias vezes</button>
+    <button onclick="zerar()">Limpar valores</button>
+
+    <section id="result">
+        <p>Já clicou 0 vezes</p>
+    </section>
+
+    <script>
+
+            var contador = 0;
+            var res = document.querySelector('section#result');
+
+        function contar(){
+            contador ++;   //Tb podia ser contador=contador+1
+            res.innerHTML = (`Já clicou ${contador} vezes.`);
+        }
+
+        function zerar(){
+            contador = 0;
+            res.innerHTML = ("Já clicou 0 vezes");
+        }
+
+    </script>
+
+</body>
+</html>

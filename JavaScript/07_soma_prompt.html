@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Soma dois números</title>
+</head>
+
+<body>
+    <h1>Soma de dois números vindos de um prompt</h1>
+
+    <button onclick="somar()">Soma dois números</button>
+
+    <p id="result">O resultado vai aparecer aqui</p>
+    <p>E não vai aparecer aqui</p>
+
+    <script>
+
+        function somar(){
+            var n1 = Number(window.prompt('Digite o primeiro número: '));
+            var n2 = Number(window.prompt('Digite o segundo número: '));
+
+            soma = n1+n2;
+
+            var result = document.querySelector('p#result');
+            result.innerHTML = (`O resultado da soma de <mark> ${n1} </mark> com <mark> ${n2} </mark> é <mark> ${soma} </mark>`);
+            //console.log('A soma é ', soma);
+        }
+
+    </script>
+
+
+
+</body>
+</html>

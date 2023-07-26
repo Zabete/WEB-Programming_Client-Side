@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+
+    <button onclick="clicar()">Introduza dois números</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        /*function clicar() {
+            var n1 = Number(window.prompt('Digite o primeiro número: '));
+            var n2 = Number(window.prompt('Digite o segundo número: '));
+
+            maior = Math.max(n1,n2);
+
+            var result = document.querySelector('p#result');
+            result.innerHTML = (`O primeiro número introduzido foi o ${n1} e o segundo foi o ${n2}.`);
+            result.innerHTML += (`<p> O número maior introduzido foi o ${maior}. </p>`);
+        }*/
+
+
+        function clicar() {
+            var n1 = Number(window.prompt('Digite o primeiro número: '));
+            var n2 = Number(window.prompt('Digite o segundo número: '));
+            
+            var result = document.querySelector('p#result');
+            result.innerHTML = (`<p> O primeiro número introduzido foi o ${n1} e o segundo foi o ${n2}.</p>`);
+            
+            if (n1>n2) {
+                result.innerHTML += (`O maior número é o ${n1}.`);
+            }
+            else {
+                result.innerHTML += (`O maior número é o ${n2}.`);
+            }
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinha</title>
+</head>
+    <!-- onload sorteia diretamente um número quando abrimos a página -->
+<body onload="sorteia_numero()">
+
+    <h1>Adivinha o número que eu pensei entre 1 e 100</h1>
+    <p>Já gerei o número. Começa a jogar!</p>
+
+    <button onclick="jogar()">Jogar - Aposta num número</button>
+
+    <button onclick="jogar_while()">Jogar - Aposta num número com while</button>
+    <p id="result"></p>
+
+    <script>
+
+        var palpite;
+        var aleatorio;
+        var contador = 0;
+        var conta_maiores = 0;
+        var conta_menores = 0;
+        // let result = document.querySelector('p#result');
+
+        function sorteia_numero(){
+            aleatorio = Math.trunc(Math.random()*100)+1;
+        }
+
+        function jogar(){
+            palpite = Number(window.prompt("Qual é o seu palpite?"));
+
+            contador ++;
+
+            if (aleatorio == palpite) {
+                result.innerHTML += (`<p><b>Ganhou!!!</b> O número gerado era <mark>${aleatorio}</mark>.</p>`);
+                result.innerHTML += (`<p>Parabéns ganhou com <b>${contador} cliques</b>. Apostou um número menor <b>${conta_menores} vezes</b> e apostou um número maior <b>${conta_maiores} vezes</b>.</p>`);
+            }
+            else if (aleatorio < palpite) {
+                result.innerHTML += (`<p>O meu número é <b>menor</b> que o seu palpite <b>(${palpite})</b>. Jogue outra vez! Já clicou <b>${contador} vezes</b>.</p>`);
+                conta_menores++
+            }
+            else {
+                result.innerHTML += (`<p>O meu número é <b>maior</b> que o seu palpite <b>(${palpite})</b>. Jogue outra vez! Já clicou <b>${contador} vezes</b>.</p>`);
+                conta_maiores++
+            }
+        }
+
+        function jogar_while(){
+            while(palpite != aleatorio){
+
+            palpite = Number(window.prompt("Qual é o seu palpite?"));
+
+            contador ++;
+
+            if (aleatorio == palpite) {
+                window.alert(`Ganhou!!! Parabéns ganhou com ${contador} cliques. O número gerado era ${aleatorio}.`);
+            }
+            else if (aleatorio < palpite) {
+                window.alert(`O meu número é menor que o seu palpite (${palpite}). Jogue outra vez! Já clicou ${contador} vezes.`);
+            }
+            else {
+                window.alert(`O meu número é maior que o seu palpite (${palpite}). Jogue outra vez! Já clicou ${contador} vezes.`);
+            }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

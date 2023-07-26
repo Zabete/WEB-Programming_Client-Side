@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Datas</title>
+</head>
+<body>
+    <h1>Datas</h1>
+
+    <button onclick="mostra_datas()">Clique para saber a data de hoje</button>
+
+    <section id="result">
+        <p>Aqui vai aparecer a data atual</p>
+    </section>
+
+    <script>
+        var data_atual= new Date();
+        var res= document.querySelector('section#result');
+
+        function mostra_datas() {
+
+            var meses= new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro');
+
+            var dias = new Array('Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sabádo');
+
+            var aniversario = new Date('1989/10/07');
+            
+            
+
+            res.innerHTML = (`<p>A data atual é ${data_atual}.</p>`);
+
+            //O getDay() é um índice que começa no domingo, sendo que o domingo é 0.
+            res.innerHTML += (`<p>O dia da semana é ${data_atual.getDay()}.</p>`);
+
+            res.innerHTML += (`<p>O dia do mês é ${data_atual.getDate()}.</p>`);
+            
+            //O getMonyh() é um índice que começa em Janeiro, sendo que o Janeiro é 0.
+            res.innerHTML += (`<p>O mês é ${data_atual.getMonth()}.</p>`);
+            
+            //O getYear() indica o número de anos desde 1900.
+            res.innerHTML += (`<p>O ano é ${data_atual.getYear()}.</p>`);
+            
+            res.innerHTML += (`<p>O ano é ${data_atual.getFullYear()}.</p>`);
+            
+            res.innerHTML += (`<p>As horas são ${data_atual.getHours()}.</p>`);
+            res.innerHTML += (`<p>Os minutos são ${data_atual.getMinutes()}.</p>`);
+            res.innerHTML += (`<p>Os segundos são ${data_atual.getSeconds()}.</p>`);
+            res.innerHTML += (`<p>Os milissegundos são ${data_atual.getMilliseconds()}.</p>`);
+            
+            //O getTime() indica os milissegundos desde 1970.
+            res.innerHTML += (`<p>Os milissegundos são ${data_atual.getTime()}.</p>`);
+            res.innerHTML += (`<p>A hora é ${data_atual.getHours()}:${data_atual.getMinutes()}:${data_atual.getSeconds()}.</p>`);
+
+            //Indica o mês do ano tendo em conta o array que definimos em cima.
+            res.innerHTML += (`<p>O mês é ${meses[data_atual.getMonth()]}.</p>`);
+
+            //Indica o dia da semana tendo em conta o array que definimos em cima.
+            res.innerHTML += (`<p>O dia da semana é ${dias[data_atual.getDay()]}.</p>`);
+
+            //Indica o dia da semana tendo em conta uma data definida numa variável em cima.
+            res.innerHTML += (`<p>Nasceu num ${dias[aniversario.getDay()]}.</p>`);
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

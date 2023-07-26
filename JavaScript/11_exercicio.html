@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+
+    <button onclick="clicar()">Introduza um número</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function clicar() {
+            var n1 = Number(window.prompt('Digite um número: '));
+           
+            par = n1%2
+
+            if (par == 0) {
+                result.innerHTML = (`O número ${n1} é par.`);
+            }
+            else {
+                result.innerHTML = (`O número ${n1} é ímpar.`);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

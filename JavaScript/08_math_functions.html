@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculos em HTML</title>
+</head>
+<body>
+    <h1>Cálculos matemáticos em JavaScript</h1>
+    <button onclick="calcular()">Número a calcular</button>
+
+    <section id="result">
+        <p>O resultado vai aparecer aqui</p>
+    </section>
+
+    <script>
+
+        function calcular(){
+            let numero = Number(window.prompt('Digite um número'));
+
+            let res = document.querySelector('section#result');
+            res.innerHTML = `<p> O número que inseriu foi o ${numero} </p>`;
+            res.innerHTML += `<p> O número absoluto é ${Math.abs(numero)} </p>`;
+            res.innerHTML += `<p> A parte inteira é ${Math.trunc(numero)} </p>`; 
+            res.innerHTML += `<p> A raiz quadrada é ${Math.sqrt(numero)} </p>`;
+            res.innerHTML += `<p> A raiz cúbica é ${Math.cbrt(numero)} </p>`;
+            res.innerHTML += `<p> O resultado de ${numero}<sup>2</sup> é ${Math.pow(numero,2)} </p>`;
+            res.innerHTML += `<p> O resultado de ${numero}<sup>3</sup> é ${Math.pow(numero,3)} </p>`;
+            res.innerHTML += `<p> O número inteiro mais próximo é ${Math.round(numero)} </p>`;
+            
+            //Por defeito gera um número aleatório entre 0 e 1 sendo que o 1 nunca sai
+            res.innerHTML += `<p> Gera um número aleatório ${Math.random()} </p>`;
+            //Se quiser um número aleatório entre 1 e 10 colocamos *10
+            res.innerHTML += `<p> Gera um número aleatório ${Math.random()*10} </p>`;
+            //Número aleatório até 100 mas colocando só a parte inteira
+            res.innerHTML += `<p> Gera um número aleatório ${Math.trunc(Math.random()*100)} </p>`;
+        }
+
+    </script>
+
+</body>
+</html>
